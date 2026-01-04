@@ -1410,9 +1410,10 @@ a {
 
 .editor-content {
   padding: 24px;
-  min-height: 200px;
+  height: 220px;
   width: 100%;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* Preview view */
