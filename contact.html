@@ -395,13 +395,41 @@
       });
     }
 
-    // Form submission - show Calendly
-    qualifyForm?.addEventListener('submit', (e) => {
+    // Form submission - save to DB and show Calendly
+    qualifyForm?.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      // In production, save form data here
       const formData = new FormData(qualifyForm);
-      console.log('Qualification data:', Object.fromEntries(formData));
+      const submitBtn = qualifyForm.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Loading...';
+
+      // Collect frustrations as array
+      const frustrations = Array.from(
+        document.querySelectorAll('input[name="frustrations"]:checked')
+      ).map(cb => cb.value);
+
+      const data = {
+        name: formData.get('name'),
+        state: formData.get('state'),
+        role: formData.get('role'),
+        reports_per_year: parseInt(formData.get('reports_per_year')) || 0,
+        frustrations: frustrations,
+        uses_ai: formData.get('uses_ai'),
+        nasp_2026: formData.get('nasp_2026'),
+        wishlist: formData.get('wishlist')
+      };
+
+      // Save to database
+      try {
+        await fetch('/api/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+      } catch (err) {
+        console.error('Failed to save submission:', err);
+      }
 
       // Show Calendly step with skeleton
       qualifyStep.style.display = 'none';
@@ -416,7 +444,7 @@
           url: 'https://calendly.com/adrienne-sagereport/sagereport-beta-tester-intro?hide_gdpr_banner=1',
           parentElement: document.getElementById('calendlyContainer'),
           prefill: {
-            name: formData.get('name')
+            name: data.name
           }
         });
 
