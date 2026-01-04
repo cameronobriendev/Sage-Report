@@ -1,4 +1,4 @@
-import { sql } from '@vercel/postgres';
+import { put } from '@vercel/blob';
 
 export default async function handler(req, res) {
   // CORS headers
@@ -15,40 +15,23 @@ export default async function handler(req, res) {
   }
 
   try {
-    const {
-      name,
-      state,
-      role,
-      reports_per_year,
-      frustrations,
-      uses_ai,
-      nasp_2026,
-      wishlist
-    } = req.body;
+    const data = req.body;
 
-    // Create table if not exists
-    await sql`
-      CREATE TABLE IF NOT EXISTS submissions (
-        id SERIAL PRIMARY KEY,
-        name VARCHAR(255),
-        state VARCHAR(100),
-        role VARCHAR(100),
-        reports_per_year INTEGER,
-        frustrations TEXT[],
-        uses_ai VARCHAR(10),
-        nasp_2026 VARCHAR(10),
-        wishlist TEXT,
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-      )
-    `;
+    // Add timestamp
+    data.submitted_at = new Date().toISOString();
 
-    // Insert submission
-    await sql`
-      INSERT INTO submissions (name, state, role, reports_per_year, frustrations, uses_ai, nasp_2026, wishlist)
-      VALUES (${name}, ${state}, ${role}, ${reports_per_year}, ${frustrations}, ${uses_ai}, ${nasp_2026}, ${wishlist})
-    `;
+    // Create unique filename
+    const timestamp = Date.now();
+    const safeName = (data.name || 'anonymous').replace(/[^a-z0-9]/gi, '_').toLowerCase();
+    const filename = `submissions/${timestamp}_${safeName}.json`;
 
-    return res.status(200).json({ success: true });
+    // Store in Vercel Blob
+    const blob = await put(filename, JSON.stringify(data, null, 2), {
+      contentType: 'application/json',
+      access: 'public'
+    });
+
+    return res.status(200).json({ success: true, url: blob.url });
   } catch (error) {
     console.error('Submission error:', error);
     return res.status(500).json({ error: 'Failed to save submission' });
