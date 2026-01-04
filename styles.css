@@ -1377,7 +1377,8 @@ a {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
   overflow: hidden;
-  min-width: 420px;
+  width: 450px;
+  flex-shrink: 0;
 }
 
 .editor-toolbar {
