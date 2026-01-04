@@ -13,3 +13,5 @@ Thumbs.db
 NOTES.md
 CLIENT.md
 *.local.md
+.vercel
+.env*.local
