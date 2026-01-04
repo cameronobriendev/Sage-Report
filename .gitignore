@@ -8,3 +8,8 @@ Thumbs.db
 
 # Local
 *.log
+
+# Private docs (README.md is public)
+NOTES.md
+CLIENT.md
+*.local.md
