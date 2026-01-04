@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How It Works - SageReport</title>
+  <meta name="description" content="See how SageReport transforms report writing: upload student records, get AI-generated drafts in minutes, review and finalize with full control.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+<img src="assets/logo.png" alt="SageReport" class="logo-icon" width="32" height="32">
+        <span class="logo-text">SageReport</span>
+      </a>
+      <div class="nav-links">
+        <a href="/features.html">Features</a>
+        <a href="/how-it-works.html" class="active">How It Works</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html" class="nav-cta">Book a Demo</a>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>From upload to draft in minutes</h1>
+      <p>A workflow designed by school psychologists, for school psychologists. Here's how it works.</p>
+    </div>
+  </section>
+
+  <!-- Steps Detail -->
+  <section class="steps-detail">
+    <div class="container">
+      <!-- Step 1 -->
+      <div class="step-block">
+        <div class="step-indicator">
+          <span class="step-num">1</span>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content-block">
+          <h2>Upload the Student Record</h2>
+          <p>Gather everything for the evaluation and upload it in one go. No more copying scores by hand or switching between ten different files.</p>
+
+          <div class="step-details">
+            <h3>What you can upload:</h3>
+            <div class="upload-types">
+              <div class="upload-type">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
+                <span>Test protocols (PDF, scanned)</span>
+              </div>
+              <div class="upload-type">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
+                <span>Prior evaluation reports</span>
+              </div>
+              <div class="upload-type">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
+                <span>Teacher/parent questionnaires</span>
+              </div>
+              <div class="upload-type">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
+                <span>Observation notes</span>
+              </div>
+              <div class="upload-type">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
+                <span>Interview transcripts</span>
+              </div>
+              <div class="upload-type">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
+                <span>Medical/developmental history</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-visual">
+            <div class="upload-mockup interactive-step" id="step1Demo">
+              <div class="upload-header">
+                <span>New Evaluation</span>
+              </div>
+              <div class="upload-dropzone">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="17 8 12 3 7 8"></polyline>
+                  <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+                <p>Drag and drop files or click to browse</p>
+              </div>
+              <div class="uploaded-files">
+                <div class="file-item" data-delay="0">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path></svg>
+                  <span>WISC-V_Protocol.pdf</span>
+                  <span class="file-check">✓</span>
+                </div>
+                <div class="file-item" data-delay="1">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path></svg>
+                  <span>BASC-3_Teacher.pdf</span>
+                  <span class="file-check">✓</span>
+                </div>
+                <div class="file-item" data-delay="2">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path></svg>
+                  <span>Prior_Eval_2022.pdf</span>
+                  <span class="file-check">✓</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-block">
+        <div class="step-indicator">
+          <span class="step-num">2</span>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content-block">
+          <h2>SageReport Generates Your Draft</h2>
+          <p>Our AI processes all uploaded documents, extracts and validates scores, integrates data across sources, and generates a comprehensive report draft aligned with your state's requirements.</p>
+
+          <div class="step-details">
+            <h3>What happens behind the scenes:</h3>
+            <div class="process-steps">
+              <div class="process-step">
+                <div class="process-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                </div>
+                <div class="process-text">
+                  <strong>Data Extraction</strong>
+                  <span>Scores, dates, and key information pulled from documents</span>
+                </div>
+              </div>
+              <div class="process-step">
+                <div class="process-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                </div>
+                <div class="process-text">
+                  <strong>Validation</strong>
+                  <span>Scores checked against norms and flagged if unusual</span>
+                </div>
+              </div>
+              <div class="process-step">
+                <div class="process-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="8" y1="6" x2="21" y2="6"></line>
+                    <line x1="8" y1="12" x2="21" y2="12"></line>
+                    <line x1="8" y1="18" x2="21" y2="18"></line>
+                    <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                    <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                    <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                  </svg>
+                </div>
+                <div class="process-text">
+                  <strong>Integration</strong>
+                  <span>Cross-battery analysis across all assessment data</span>
+                </div>
+              </div>
+              <div class="process-step">
+                <div class="process-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                  </svg>
+                </div>
+                <div class="process-text">
+                  <strong>Generation</strong>
+                  <span>State-aligned, parent-friendly narrative created</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-visual">
+            <div class="processing-mockup interactive-step" id="step2Demo">
+              <div class="processing-header">
+                <span class="processing-title">Generating Report...</span>
+              </div>
+              <div class="processing-stages">
+                <div class="stage" data-stage="1">
+                  <span class="stage-indicator"><span class="stage-dot"></span></span>
+                  <span>Document processing</span>
+                </div>
+                <div class="stage" data-stage="2">
+                  <span class="stage-indicator"><span class="stage-dot"></span></span>
+                  <span>Score extraction</span>
+                </div>
+                <div class="stage" data-stage="3">
+                  <span class="stage-indicator"><span class="stage-dot"></span></span>
+                  <span>Data validation</span>
+                </div>
+                <div class="stage" data-stage="4">
+                  <span class="stage-indicator"><span class="stage-dot"></span></span>
+                  <span>Generating narrative</span>
+                </div>
+                <div class="stage" data-stage="5">
+                  <span class="stage-indicator"><span class="stage-dot"></span></span>
+                  <span>Final review</span>
+                </div>
+              </div>
+              <div class="processing-complete" style="display: none;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Report Ready!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-block">
+        <div class="step-indicator">
+          <span class="step-num">3</span>
+        </div>
+        <div class="step-content-block">
+          <h2>Review, Edit, and Finalize</h2>
+          <p>You're in control. Review the generated draft, make any clinical additions or adjustments, and finalize when you're satisfied. Export to your preferred format.</p>
+
+          <div class="step-details">
+            <h3>You can always:</h3>
+            <ul class="control-list">
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                Edit any section of the report
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                Add your own clinical observations
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                Override AI-generated recommendations
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                Request regeneration of specific sections
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                Export to Word, PDF, or your district system
+              </li>
+            </ul>
+          </div>
+
+          <div class="step-visual">
+            <div class="final-mockup" id="step3Demo">
+              <div class="final-header">
+                <span>Psychoeducational Evaluation Report</span>
+                <div class="final-actions">
+                  <span class="action-btn">Edit</span>
+                  <span class="action-btn primary export-btn" style="opacity: 0.5; pointer-events: none;">Export</span>
+                </div>
+              </div>
+              <div class="final-content">
+                <div class="report-section">
+                  <h4>Reason for Referral</h4>
+                  <p>Student was referred for a comprehensive psychoeducational evaluation due to concerns regarding...</p>
+                </div>
+                <div class="report-section">
+                  <h4>Cognitive Assessment Results</h4>
+                  <p>On the WISC-V, the student obtained a Full Scale IQ of 102, which falls in the Average range...</p>
+                </div>
+                <div class="report-badge waiting" id="approvalBadge">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span class="badge-text">Awaiting Your Approval</span>
+                  <button class="approve-btn" id="approveBtn">Approve & Finalize</button>
+                </div>
+                <div class="report-badge approved" id="approvedBadge" style="display: none;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  <span class="badge-text">Report Finalized - Ready to Export</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Time Saved -->
+  <section class="time-saved">
+    <div class="container">
+      <div class="time-saved-content">
+        <h2>What will you do with the extra time?</h2>
+        <p>School psychologists using SageReport report saving 5+ hours per evaluation. That's time you can spend with students, supporting teachers, or simply leaving work at a reasonable hour.</p>
+        <div class="time-examples">
+          <div class="time-example">
+            <span class="example-time">5 hours saved</span>
+            <span class="example-use">= 10 more student sessions per week</span>
+          </div>
+          <div class="time-example">
+            <span class="example-time">20 hours/month</span>
+            <span class="example-use">= Focus on crisis intervention & support</span>
+          </div>
+          <div class="time-example">
+            <span class="example-time">240 hours/year</span>
+            <span class="example-use">= 6 full weeks of reclaimed time</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to try it yourself?</h2>
+        <p>Book a 15-minute intro call to see SageReport in action and learn about early access.</p>
+        <div class="cta-buttons">
+          <a href="/contact.html" class="btn btn-primary btn-large">Book a Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo">
+<img src="assets/logo.png" alt="SageReport" class="logo-icon" width="28" height="28">
+            <span class="logo-text">SageReport</span>
+          </a>
+          <p>AI-powered report writing for school psychologists. Give time back to students.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Product</h4>
+          <a href="/features.html">Features</a>
+          <a href="/how-it-works.html">How It Works</a>
+          <a href="/contact.html">Book a Demo</a>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 SageReport, Inc. All rights reserved.</p>
+        <p>FERPA Compliant | Built in the USA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    mobileMenuBtn?.addEventListener('click', () => navLinks.classList.toggle('active'));
+
+    const nav = document.querySelector('.nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Step 1: File upload animation (plays once, doesn't loop)
+    const step1 = document.getElementById('step1Demo');
+    const fileItems = step1?.querySelectorAll('.file-item');
+    let step1Played = false;
+
+    step1?.addEventListener('mouseenter', () => {
+      if (step1Played) return;
+      step1Played = true;
+
+      fileItems?.forEach((item, i) => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateX(-20px)';
+        setTimeout(() => {
+          item.style.transition = 'all 0.4s ease';
+          item.style.opacity = '1';
+          item.style.transform = 'translateX(0)';
+        }, i * 200);
+      });
+    });
+
+    // Step 2: Processing animation (plays once, doesn't loop)
+    const step2 = document.getElementById('step2Demo');
+    const stages = step2?.querySelectorAll('.stage');
+    const processingTitle = step2?.querySelector('.processing-title');
+    let step2Played = false;
+
+    step2?.addEventListener('mouseenter', () => {
+      if (step2Played) return;
+      step2Played = true;
+
+      const stageDurations = [800, 1200, 600, 1400, 500]; // Varying durations for each step
+
+      // Reset all stages
+      stages?.forEach(s => {
+        s.classList.remove('complete', 'active');
+        const indicator = s.querySelector('.stage-indicator');
+        indicator.innerHTML = '<span class="stage-dot"></span>';
+      });
+      processingTitle.textContent = 'Generating Report...';
+
+      // Animate through stages with varying durations
+      let currentStage = 0;
+
+      function animateStage() {
+        if (currentStage < stages.length) {
+          // Complete previous stage
+          if (currentStage > 0) {
+            const prevStage = stages[currentStage - 1];
+            prevStage.classList.remove('active');
+            prevStage.classList.add('complete');
+            prevStage.querySelector('.stage-indicator').innerHTML = '<span class="stage-check">✓</span>';
+          }
+
+          // Activate current stage
+          const stage = stages[currentStage];
+          stage.classList.add('active');
+          stage.querySelector('.stage-indicator').innerHTML = '<span class="stage-spinner"></span>';
+
+          const duration = stageDurations[currentStage];
+          currentStage++;
+          setTimeout(animateStage, duration);
+        } else {
+          // Complete last stage
+          const lastStage = stages[stages.length - 1];
+          lastStage.classList.remove('active');
+          lastStage.classList.add('complete');
+          lastStage.querySelector('.stage-indicator').innerHTML = '<span class="stage-check">✓</span>';
+
+          processingTitle.textContent = 'Complete!';
+        }
+      }
+
+      animateStage();
+    });
+
+    // Step 3: Human-in-the-loop approval
+    const approveBtn = document.getElementById('approveBtn');
+    const approvalBadge = document.getElementById('approvalBadge');
+    const approvedBadge = document.getElementById('approvedBadge');
+    const exportBtn = document.querySelector('.export-btn');
+
+    approveBtn?.addEventListener('click', () => {
+      approvalBadge.style.display = 'none';
+      approvedBadge.style.display = 'flex';
+      exportBtn.style.opacity = '1';
+      exportBtn.style.pointerEvents = 'auto';
+    });
+  </script>
+</body>
+</html>

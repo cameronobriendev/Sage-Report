@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Demo - SageReport</title>
+  <meta name="description" content="Book a 15-minute intro call to see SageReport in action and learn about early access for school psychologists.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+<img src="assets/logo.png" alt="SageReport" class="logo-icon" width="32" height="32">
+        <span class="logo-text">SageReport</span>
+      </a>
+      <div class="nav-links">
+        <a href="/features.html">Features</a>
+        <a href="/how-it-works.html">How It Works</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html" class="nav-cta active">Book a Demo</a>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header contact-header">
+    <div class="container">
+      <h1>Let's talk</h1>
+      <p>Book a 15-minute intro call to see SageReport in action and learn about early access.</p>
+    </div>
+  </section>
+
+  <!-- Contact Options -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Qualification + Calendly -->
+        <div class="contact-primary">
+          <div class="contact-card calendly-card">
+            <!-- Step 1: Qualification Questions -->
+            <div id="qualifyStep" class="qualify-step">
+              <div class="card-header-contact">
+                <h2>Quick Questions First</h2>
+                <p>Help us understand your needs so we can make the most of our time together.</p>
+                <div class="progress-indicator">
+                  <span class="progress-dot active" data-step="1"></span>
+                  <span class="progress-dot" data-step="2"></span>
+                  <span class="progress-dot" data-step="3"></span>
+                </div>
+              </div>
+
+              <form id="qualifyForm" class="qualify-form">
+                <!-- Page 1 -->
+                <div class="form-page active" data-page="1">
+                  <div class="form-group">
+                    <label for="q-name">Full Name *</label>
+                    <input type="text" id="q-name" name="name" required placeholder="Your name">
+                  </div>
+                  <div class="form-group">
+                    <label for="q-state">What state do you work in? *</label>
+                    <input type="text" id="q-state" name="state" required placeholder="e.g., California">
+                  </div>
+                  <div class="form-group">
+                    <label for="q-role">Your role or position *</label>
+                    <select id="q-role" name="role" required>
+                      <option value="">Select your role...</option>
+                      <option value="school_psychologist">School Psychologist</option>
+                      <option value="district_admin">District Administrator</option>
+                      <option value="special_ed_director">Special Education Director</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="q-reports">How many reports do you write per year? *</label>
+                    <input type="number" id="q-reports" name="reports_per_year" required placeholder="e.g., 50">
+                  </div>
+                  <button type="button" class="btn btn-primary btn-full next-btn" data-next="2">Continue</button>
+                </div>
+
+                <!-- Page 2 -->
+                <div class="form-page" data-page="2">
+                  <div class="form-group">
+                    <label>What's most frustrating about report writing? *</label>
+                    <p class="form-hint">Choose up to 3</p>
+                    <div class="checkbox-grid">
+                      <label class="checkbox-option">
+                        <input type="checkbox" name="frustrations" value="getting_started">
+                        <span>Getting started / "Eating the frog"</span>
+                      </label>
+                      <label class="checkbox-option">
+                        <input type="checkbox" name="frustrations" value="organizing">
+                        <span>Organizing background info</span>
+                      </label>
+                      <label class="checkbox-option">
+                        <input type="checkbox" name="frustrations" value="phrasing">
+                        <span>Getting phrasing right</span>
+                      </label>
+                      <label class="checkbox-option">
+                        <input type="checkbox" name="frustrations" value="clarity">
+                        <span>Describing results clearly</span>
+                      </label>
+                      <label class="checkbox-option">
+                        <input type="checkbox" name="frustrations" value="formatting">
+                        <span>Fixing errors & formatting</span>
+                      </label>
+                      <label class="checkbox-option">
+                        <input type="checkbox" name="frustrations" value="consistency">
+                        <span>Ensuring consistency</span>
+                      </label>
+                      <label class="checkbox-option">
+                        <input type="checkbox" name="frustrations" value="summarizing">
+                        <span>Concise summaries</span>
+                      </label>
+                      <label class="checkbox-option">
+                        <input type="checkbox" name="frustrations" value="none">
+                        <span>None of the above</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-nav">
+                    <button type="button" class="btn btn-secondary back-btn" data-back="1">Back</button>
+                    <button type="button" class="btn btn-primary next-btn" data-next="3">Continue</button>
+                  </div>
+                </div>
+
+                <!-- Page 3 -->
+                <div class="form-page" data-page="3">
+                  <div class="form-group">
+                    <label>Do you currently use AI tools for report writing?</label>
+                    <div class="radio-group">
+                      <label class="radio-option">
+                        <input type="radio" name="uses_ai" value="yes">
+                        <span>Yes</span>
+                      </label>
+                      <label class="radio-option">
+                        <input type="radio" name="uses_ai" value="no">
+                        <span>No</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>Are you attending NASP 2026 in Chicago?</label>
+                    <div class="radio-group">
+                      <label class="radio-option">
+                        <input type="radio" name="nasp_2026" value="yes">
+                        <span>Yes</span>
+                      </label>
+                      <label class="radio-option">
+                        <input type="radio" name="nasp_2026" value="no">
+                        <span>No</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="q-wish">What feature do you most wish existed in a report-writing tool?</label>
+                    <textarea id="q-wish" name="wishlist" rows="3" placeholder="Tell us what would help most..."></textarea>
+                  </div>
+                  <div class="form-nav">
+                    <button type="button" class="btn btn-secondary back-btn" data-back="2">Back</button>
+                    <button type="submit" class="btn btn-primary">Show Available Times</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <!-- Step 2: Calendly (hidden initially) -->
+            <div id="calendlyStep" class="calendly-step" style="display: none;">
+              <div class="card-header-contact">
+                <h2>Book Your Demo Call</h2>
+                <p>15-minute group intro session. See SageReport in action.</p>
+              </div>
+              <div class="calendly-wrapper">
+                <!-- Skeleton loader -->
+                <div class="calendly-skeleton" id="calendlySkeleton">
+                  <div class="skeleton-header"></div>
+                  <div class="skeleton-calendar">
+                    <div class="skeleton-row">
+                      <div class="skeleton-day"></div>
+                      <div class="skeleton-day"></div>
+                      <div class="skeleton-day"></div>
+                      <div class="skeleton-day"></div>
+                      <div class="skeleton-day"></div>
+                    </div>
+                    <div class="skeleton-row">
+                      <div class="skeleton-day"></div>
+                      <div class="skeleton-day"></div>
+                      <div class="skeleton-day"></div>
+                      <div class="skeleton-day"></div>
+                      <div class="skeleton-day"></div>
+                    </div>
+                    <div class="skeleton-times">
+                      <div class="skeleton-time"></div>
+                      <div class="skeleton-time"></div>
+                      <div class="skeleton-time"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Calendly container - widget loads dynamically -->
+                <div id="calendlyContainer" style="min-width:320px;height:950px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Info Cards - Secondary -->
+        <div class="contact-secondary">
+          <!-- What to Expect -->
+          <div class="contact-info-card">
+            <h3>What to Expect</h3>
+            <p>After completing the questionnaire, you'll book a 15-minute group intro call where you'll:</p>
+            <div class="info-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>See SageReport in action</span>
+            </div>
+            <div class="info-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>Get your questions answered</span>
+            </div>
+            <div class="info-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>Learn about early access options</span>
+            </div>
+          </div>
+
+          <!-- Pilot Program -->
+          <div class="contact-info-card">
+            <h3>Pilot Program</h3>
+            <p>We're piloting with school districts for the 2025-26 school year. Early access spots are limited.</p>
+            <div class="info-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>Individual practitioners welcome</span>
+            </div>
+            <div class="info-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>District pilots available</span>
+            </div>
+            <div class="info-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <span>NASP 2026 attendees: Ask about Ambassador program</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo">
+<img src="assets/logo.png" alt="SageReport" class="logo-icon" width="28" height="28">
+            <span class="logo-text">SageReport</span>
+          </a>
+          <p>AI-powered report writing for school psychologists. Give time back to students.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Product</h4>
+          <a href="/features.html">Features</a>
+          <a href="/how-it-works.html">How It Works</a>
+          <a href="/contact.html">Book a Demo</a>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 SageReport, Inc. All rights reserved.</p>
+        <p>FERPA Compliant | Built in the USA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    mobileMenuBtn?.addEventListener('click', () => navLinks.classList.toggle('active'));
+
+    const nav = document.querySelector('.nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Multi-step qualification form
+    const qualifyForm = document.getElementById('qualifyForm');
+    const formPages = document.querySelectorAll('.form-page');
+    const progressDots = document.querySelectorAll('.progress-dot');
+    const qualifyStep = document.getElementById('qualifyStep');
+    const calendlyStep = document.getElementById('calendlyStep');
+    const calendlySkeleton = document.getElementById('calendlySkeleton');
+    const calendlyWidget = document.getElementById('calendlyWidget');
+
+    // Limit checkbox selections to 3 and grey out others
+    const checkboxes = document.querySelectorAll('input[name="frustrations"]');
+
+    function updateCheckboxStates() {
+      const checked = document.querySelectorAll('input[name="frustrations"]:checked');
+      const maxReached = checked.length >= 3;
+
+      checkboxes.forEach(cb => {
+        const option = cb.closest('.checkbox-option');
+        if (maxReached && !cb.checked) {
+          option.classList.add('disabled');
+          cb.disabled = true;
+        } else {
+          option.classList.remove('disabled');
+          cb.disabled = false;
+        }
+      });
+    }
+
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', updateCheckboxStates);
+    });
+
+    // Navigation buttons
+    document.querySelectorAll('.next-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const currentPage = btn.closest('.form-page');
+        const nextPageNum = btn.dataset.next;
+
+        // Basic validation for page 1
+        if (currentPage.dataset.page === '1') {
+          const inputs = currentPage.querySelectorAll('input[required], select[required]');
+          let valid = true;
+          inputs.forEach(input => {
+            if (!input.value) {
+              input.classList.add('error');
+              valid = false;
+            } else {
+              input.classList.remove('error');
+            }
+          });
+          if (!valid) return;
+        }
+
+        currentPage.classList.remove('active');
+        document.querySelector(`.form-page[data-page="${nextPageNum}"]`).classList.add('active');
+        updateProgress(nextPageNum);
+      });
+    });
+
+    document.querySelectorAll('.back-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const currentPage = btn.closest('.form-page');
+        const prevPageNum = btn.dataset.back;
+        currentPage.classList.remove('active');
+        document.querySelector(`.form-page[data-page="${prevPageNum}"]`).classList.add('active');
+        updateProgress(prevPageNum);
+      });
+    });
+
+    function updateProgress(pageNum) {
+      progressDots.forEach(dot => {
+        dot.classList.toggle('active', parseInt(dot.dataset.step) <= parseInt(pageNum));
+      });
+    }
+
+    // Form submission - show Calendly
+    qualifyForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // In production, save form data here
+      const formData = new FormData(qualifyForm);
+      console.log('Qualification data:', Object.fromEntries(formData));
+
+      // Show Calendly step with skeleton
+      qualifyStep.style.display = 'none';
+      calendlyStep.style.display = 'block';
+
+      // Load Calendly script dynamically
+      const script = document.createElement('script');
+      script.src = 'https://assets.calendly.com/assets/external/widget.js';
+      script.onload = () => {
+        // Initialize Calendly widget after script loads
+        Calendly.initInlineWidget({
+          url: 'https://calendly.com/adrienne-sagereport/sagereport-beta-tester-intro?hide_gdpr_banner=1',
+          parentElement: document.getElementById('calendlyContainer'),
+          prefill: {
+            name: formData.get('name')
+          }
+        });
+
+        // Hide skeleton after Calendly loads
+        setTimeout(() => {
+          calendlySkeleton.style.display = 'none';
+        }, 1000);
+      };
+      document.head.appendChild(script);
+    });
+
+    // Secondary contact form
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+
+    contactForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      contactForm.style.display = 'none';
+      formSuccess.style.display = 'flex';
+    });
+  </script>
+</body>
+</html>
